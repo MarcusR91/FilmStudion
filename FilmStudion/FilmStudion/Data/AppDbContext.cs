@@ -1,4 +1,5 @@
-﻿using FilmStudion.Models.User;
+﻿using FilmStudion.Models.FilmStudio;
+using FilmStudion.Models.User;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace FilmStudion.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<FilmStudio> FilmStudios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,10 +28,20 @@ namespace FilmStudion.Data
                 UserName = "Marcus",
                 Password = "Marcus",
                 isAdmin = true,
-                Role = "admin"
+                Role = "admin",
+                Token = ""
 
             });
- 
+            modelBuilder.Entity<FilmStudio>().HasData(new FilmStudio
+            {
+                StudioId = 1,
+                Name = "FilmStudio",
+                Password = "FilmStudio",
+                Role = "filmstudio",
+                Token = ""
+
+            });
+
 
 
         }

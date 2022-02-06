@@ -39,3 +39,9 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

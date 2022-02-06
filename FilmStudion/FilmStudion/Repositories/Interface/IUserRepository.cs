@@ -11,5 +11,6 @@ namespace FilmStudion.Repositories.Interface
         bool UserIsUnique(string userName);
         User Authenticate(string userName, string userPassword);
         User Register(string userName, string UserPassword);
+        User GetExistingUser(int Id);
     }
 }

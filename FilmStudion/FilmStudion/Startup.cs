@@ -1,3 +1,4 @@
+using FilmStudion.Automapper;
 using FilmStudion.Data;
 using FilmStudion.Repositories;
 using FilmStudion.Repositories.Interface;
@@ -37,6 +38,8 @@ namespace FilmStudion
                 => Options.UseInMemoryDatabase("Filmstudion"));
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IFilmStudioRepository, FilmStudioRepository>();
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
