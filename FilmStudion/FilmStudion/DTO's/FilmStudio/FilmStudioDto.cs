@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace FilmStudion.DTO_s.FilmStudio
 {
-    public class FilmStudioDto : IFilmStudio
+    public class FilmStudioDto
     {
-        public string Name { get; set; }
-        public string Password { get; set; }
+        public string StudioName { get; set; }
+        public string StudioPassword { get; set; }
     }
 }

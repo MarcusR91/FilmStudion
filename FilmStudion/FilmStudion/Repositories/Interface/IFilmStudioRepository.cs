@@ -10,6 +10,7 @@ namespace FilmStudion.Repositories.Interface
     {
         bool StudioIsUnique(string userName);
         FilmStudio Authenticate(string userName, string userPassword);
-        FilmStudio Register(string userName, string UserPassword);
+        FilmStudio Register(string userName, string UserPassword, string city);
+        public IEnumerable<FilmStudio> GetAll();
     }
 }

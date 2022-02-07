@@ -31,17 +31,13 @@ namespace FilmStudion.Controllers
         [HttpPost("Authenticate")]
         public IActionResult Authenticate([FromBody] UserDto model)
         {
-
-           
-
-            if (model.UserName !=null)
+            if (model.UserName !=null) //Check if username for admin is not null
             {
                 var user = _userRepo.Authenticate(model.UserName, model.UserPassword);
                 if (user == null)
                 {
                     return BadRequest("The username or password is incorrect.");
                 }
-
 
                 return Ok(new
                 {
@@ -50,12 +46,11 @@ namespace FilmStudion.Controllers
                     Role = user.Role,
                     Token = user.Token
                 });
-
             }
+
             else
             {
-                var filmStudioDto = new FilmStudioDto();
-                var studio = _studioRepo.Authenticate(model.Name, model.Password);
+                var studio = _studioRepo.Authenticate(model.StudioName, model.StudioPassword);
                 if (studio == null) 
                 {
                     return BadRequest("The username or password is incorrect.");
@@ -70,22 +65,6 @@ namespace FilmStudion.Controllers
                     Token = studio.Token
                 });
             }
-            
-
-
-            //if (user == null) 
-            //{
-            //  return  BadRequest("The username or password is incorrect.");
-            //}
-
-
-            //return Ok(new
-            //{
-            //    Id = user.UserId,
-            //    Username = user.UserName,
-            //    Role = user.Role,
-            //    Token = user.Token
-            //});
         }
 
     }

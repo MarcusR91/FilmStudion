@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FilmStudion.DTO_s.User
 {
-    public class UserDto : FilmStudioDto, IUser
+    public class UserDto : FilmStudioDto
     {
         public string UserName { get; set; }
         public string UserPassword { get; set; }

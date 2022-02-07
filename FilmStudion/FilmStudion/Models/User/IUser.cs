@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FilmStudion.Models.User
 {
-    public class User : IUser
+    public interface IUser
     {
         public int UserId { get; set; }
         public string UserName { get; set; }

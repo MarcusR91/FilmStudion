@@ -47,7 +47,7 @@ namespace FilmStudion.Repositories
             var token = tokenHandler.CreateToken(tokenDescriptor);
              user.Token = tokenHandler.WriteToken(token);
 
-            // return basic user info and authentication token
+            
             return user;
 
         }

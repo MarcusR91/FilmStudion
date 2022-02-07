@@ -52,14 +52,32 @@ namespace FilmStudion.Repositories
 
         }
 
-        public FilmStudio Register(string userName, string UserPassword)
+        public FilmStudio Register(string userName, string password, string city)
         {
-            throw new NotImplementedException();
+            FilmStudio newStudio = new FilmStudio()
+            {
+                Name = userName,
+                Password = password,
+                City = city,
+                Role = "Filmstudio"
+            };
+            _db.FilmStudios.Add(newStudio);
+            _db.SaveChanges();
+            newStudio.Password = "";
+            return newStudio;
         }
 
         public bool StudioIsUnique(string userName)
         {
-            throw new NotImplementedException();
+            var studio = _db.FilmStudios.SingleOrDefault(x => x.Name == userName);
+            if (studio == null) 
+                return true;
+
+            return false;
+        }
+        public IEnumerable<FilmStudio> GetAll() 
+        {
+            return _db.FilmStudios;
         }
     }
 }
