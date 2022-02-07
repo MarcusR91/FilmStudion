@@ -45,3 +45,7 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Scrutor.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

@@ -67,5 +67,34 @@ namespace FilmStudion.Controllers
             }
         }
 
+        [AllowAnonymous]
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] UserRegisterDTO model)
+        {
+            bool userIsUnique = _studioRepo.StudioIsUnique(model.UserName);
+
+            if (!userIsUnique)
+            {
+                return BadRequest(new { message = "This username already exists" });
+            }
+
+            var user = _userRepo.Register(model.UserName, model.Password);
+
+            return Ok(new
+            {
+                id = user.UserId,
+                username = user.UserName,
+                role = user.Role
+            });
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpGet("Getusers")]
+        public IActionResult GetAll()
+        {
+            var users = _userRepo.GetAllUsers();
+            return Ok(users);
+        }
+
     }
 }

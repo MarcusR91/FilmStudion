@@ -39,7 +39,8 @@ namespace FilmStudion.Repositories
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, user.UserId.ToString())
+                    new Claim(ClaimTypes.Name, user.UserId.ToString()),
+                    new Claim(ClaimTypes.Role, user.Role)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -56,9 +57,24 @@ namespace FilmStudion.Repositories
         {
             return _db.Users.FirstOrDefault(x => x.UserId == Id);
         }
-        public User Register(string userName, string UserPassword)
+        public User Register(string userName, string password)
         {
-            throw new NotImplementedException();
+            User newAdmin = new User()
+            {
+                UserName = userName,
+                Password = password,
+                isAdmin = true,
+                Role = "admin"
+            };
+            _db.Users.Add(newAdmin);
+            _db.SaveChanges();
+            newAdmin.Password = "";
+            return newAdmin;
+        }
+
+        public IEnumerable<User> GetAllUsers() 
+        {
+            return _db.Users;
         }
 
         public bool UserIsUnique(string userName)

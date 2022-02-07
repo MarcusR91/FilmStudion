@@ -17,6 +17,7 @@ namespace FilmStudion.Automapper
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<FilmStudio, FilmStudioDto>().ReverseMap();
             CreateMap<FilmStudio, RegisterFilmStudioDto>().ReverseMap();
+            CreateMap<User, UserRegisterDTO>().ReverseMap();
         }
     }
 }

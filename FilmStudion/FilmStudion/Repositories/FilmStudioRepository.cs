@@ -39,7 +39,8 @@ namespace FilmStudion.Repositories
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(ClaimTypes.Name, filmStudio.StudioId.ToString())
+                    new Claim(ClaimTypes.Name, filmStudio.StudioId.ToString()),
+                    new Claim(ClaimTypes.Role, filmStudio.Role)
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
@@ -59,7 +60,7 @@ namespace FilmStudion.Repositories
                 Name = userName,
                 Password = password,
                 City = city,
-                Role = "Filmstudio"
+                Role = "filmstudio"
             };
             _db.FilmStudios.Add(newStudio);
             _db.SaveChanges();

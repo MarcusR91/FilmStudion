@@ -12,5 +12,6 @@ namespace FilmStudion.Repositories.Interface
         User Authenticate(string userName, string userPassword);
         User Register(string userName, string UserPassword);
         User GetExistingUser(int Id);
+        public IEnumerable<User> GetAllUsers();
     }
 }
