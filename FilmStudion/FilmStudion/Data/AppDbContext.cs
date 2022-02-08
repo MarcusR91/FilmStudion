@@ -1,4 +1,5 @@
-﻿using FilmStudion.Models.FilmStudio;
+﻿using FilmStudion.Models.Film;
+using FilmStudion.Models.FilmStudio;
 using FilmStudion.Models.User;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -17,6 +18,9 @@ namespace FilmStudion.Data
 
         public DbSet<User> Users { get; set; }
         public DbSet<FilmStudio> FilmStudios { get; set; }
+        public DbSet<Film> Films { get; set; }
+        public DbSet<FilmCopy> FilmCopies { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -12,8 +12,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTO%27s\Film\" />
-  </ItemGroup>
-
 </Project>

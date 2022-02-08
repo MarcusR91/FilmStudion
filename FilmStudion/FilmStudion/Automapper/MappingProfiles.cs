@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using FilmStudion.DTO_s.Film;
 using FilmStudion.DTO_s.FilmStudio;
 using FilmStudion.DTO_s.User;
+using FilmStudion.Models.Film;
 using FilmStudion.Models.FilmStudio;
 using FilmStudion.Models.User;
 using System;
@@ -18,6 +20,9 @@ namespace FilmStudion.Automapper
             CreateMap<FilmStudio, FilmStudioDto>().ReverseMap();
             CreateMap<FilmStudio, RegisterFilmStudioDto>().ReverseMap();
             CreateMap<User, UserRegisterDTO>().ReverseMap();
+            CreateMap<Film, FilmDto>().ReverseMap();
+            CreateMap<Film, CreateFilmDto>().ReverseMap();
+            CreateMap<FilmStudio, GetFilmStudioDto>().ReverseMap();
         }
     }
 }

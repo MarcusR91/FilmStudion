@@ -1,5 +1,8 @@
-﻿using FilmStudion.DTO_s.FilmStudio;
+﻿using FilmStudion.Data;
+using FilmStudion.DTO_s.FilmStudio;
+using FilmStudion.DTO_s.User;
 using FilmStudion.Models.FilmStudio;
+using FilmStudion.Models.User;
 using FilmStudion.Repositories.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -18,11 +21,13 @@ namespace FilmStudion.Controllers
 
         //private readonly IUserRepository _userRepo;
         private readonly IFilmStudioRepository _studioRepo;
+        private readonly AppDbContext _db;
 
 
-        public FilmStudioController(IFilmStudioRepository studioRepo)
+        public FilmStudioController(IFilmStudioRepository studioRepo, AppDbContext db)
         {
             _studioRepo = studioRepo;
+            _db = db;
         }
 
         [AllowAnonymous]
@@ -38,21 +43,52 @@ namespace FilmStudion.Controllers
 
             var studio = _studioRepo.Register(model.Name, model.Password, model.City);
 
-            return Ok(new 
+            return Ok(new
             {
                 Id = studio.StudioId,
                 Username = studio.Name,
                 City = studio.City,
                 Role = studio.Role,
-                
+
             });
         }
 
+
         [HttpGet("Getstudios")]
-        public IActionResult GetAll()
+        public IActionResult GetAllStudios()
         {
-            var studios = _studioRepo.GetAll();
-            return Ok(studios);
+
+            var user = this.User.IsInRole("filmstudio");
+
+            if (user)
+            {
+                var studios = from b in _db.FilmStudios
+                              select new GetFilmStudioDto()
+                              {
+                                  StudioId = b.StudioId,
+                                  Name = b.Name,
+                                  Role = b.Role
+
+                              };
+                return Ok(studios);
+            }
+            if (this.User.IsInRole("admin"))
+            {
+                var studios = _studioRepo.GetAll();
+                return Ok(studios);
+            }
+
+            var unauthorizedUser = from b in _db.FilmStudios
+                                   select new GetFilmStudioDto()
+                                   {
+                                       StudioId = b.StudioId,
+                                       Name = b.Name,
+                                       Role = b.Role
+
+                                   };
+
+            return BadRequest(unauthorizedUser);
+
         }
     }
 }

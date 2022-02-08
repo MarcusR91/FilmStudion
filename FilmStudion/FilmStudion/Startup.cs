@@ -41,6 +41,7 @@ namespace FilmStudion
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IFilmStudioRepository, FilmStudioRepository>();
+            services.AddScoped<IFilmRepository, FilmRepository>();
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddControllers();
             services.AddSwaggerGen(c =>

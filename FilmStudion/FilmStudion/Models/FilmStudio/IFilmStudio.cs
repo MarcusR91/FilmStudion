@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmStudion.Models.Film;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,8 @@ namespace FilmStudion.Models.FilmStudio
         public string Name { get; set; }
         public string City { get; set; }
         public string Role { get; set; }
+        public List<FilmCopy> RentedFilmCopies { get; set; }
+       
 
     }
 }
