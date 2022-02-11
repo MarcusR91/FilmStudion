@@ -53,4 +53,19 @@ alla studios ska kunna se allting om alla andra.
 
 Till dessa åtkomstpunkter används även crud funktioner från mitt repository som hämtar data från databasen. 
 
+## Implementation
+
+Jag använder mig utav stycken domänklasser: ```Film.cs```, ```FilmStudio.cs```, ```FiilmCopy.cs``` och ```User.cs```. Dessa klasser är de som är mina entiter och används för att lagras i databasen. Varje entitet har även sina interfaces som uppfylls av sina repektive enititetsklasser. I dessa så lagras den nödvändiga datan som behövs för varje entitet. Exempelvis ```UserName``` i entiten ```User```. 
+
+För de synlliga resurserna som visas i api:et har det valts att användas Dto's där mappning sker emellan en Dto och sin resoektive entitet. Exempelvis min ```UserDto``` innehåller bara ```UserName``` och ```Password```. Då denna resurs används för autentisering av en användare så behöver man inte mer än dessa två properties för att en registrering ska kunna göras. Mappningen mellan ```UserDto``` och ```User```gör så att den datan som skrivs in 
+i anropet sedan sparas i entiteten som i sin tur lagras i databasen. 
+
+Entitet ```FilmStudio``` har resurserna ```FilmStudioDto``` , som används för att lagra UserName och PassWord av en filmstudio, ```GetFilmStudioDto``` som ser likadan ut som entiteten eftersom att denna används för att hämta alla studios. ```GetFilmStudioLimitedDto``` som snvänds för att hämta mer begränsad information om en filmstudio. Här har egenskaperna ```City``` och ```RentedFilmCopies``` exkluderats då denna dto används för att visa information till en användare som inte är autentiserad. Sedna har vi ```RegisterFilmStudioDto``` ´som bara innehåller egenskaperna ```City```, ```Name``` och ```password``` då denna används för registrering av en 
+filmstudio. 
+
+Entiten ```Film``` har de synliga resurserna: ```FilmDto``` som har alla properties frpn entiteten. Denna används för att kunna returnera filmerna i GET anrop. ```CreateFilmDto``` har även den samma properties som sin entitet. Denna används i skapandet av en film. ```UpdateFilmDto``` har även den samma properties, inkousive listan av filmcopies. Denna används för att en adminska kunna ändra och uppdatera en existerande film samt ändra hur många exemplar som finns flr filmen. 
+
+Entitetn ```User``` har två stycken synliga resurser: ```UserDto```, denna har bara egenskaperna UserName och Password och används vid autentisering av en användare. ```UserRegisterDto``` har också bara dessa två egenskaperoch används vid registrering av en användare.
+
+
 
