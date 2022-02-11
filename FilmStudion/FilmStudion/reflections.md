@@ -68,4 +68,12 @@ Entiten ```Film``` har de synliga resurserna: ```FilmDto``` som har alla propert
 Entitetn ```User``` har två stycken synliga resurser: ```UserDto```, denna har bara egenskaperna UserName och Password och används vid autentisering av en användare. ```UserRegisterDto``` har också bara dessa två egenskaperoch används vid registrering av en användare.
 
 
+## Säkerhet
+
+Som säkerhetsåtgärder har jag använt mig mycket av autentiseringen. Mina åtkomstpunkter för att skapa ny film, uppdatera en existerande film och ändra antalet tillgängliga kopior av en film så krävs en administratörsroll. Detta görs med hjälp av ```[Authorize(Role = "admin")]```. Försöker en icke autentiserad användare göra detta så får de felmeddelandet "401".
+
+Core Identity används för att säkerställa vilken användare som för tillfället är inloggad med hjälp av ```IsInRole()``` metoden på ide åtkomstpunkter där en viss autentisering behövs, exempelvis åtkomstpunkten för att hämta en viss filmstudio. På detta sättet ser jag till så att inte fel information visas för fel användare.  
+
+Dto klasserna har också använts flitigt för attbgränsa vilken data som visas för användaren. Jag skapar olika Dto's för flera av mina entiteter för att på ett bra sätt kunna begränsa det som användaren ser. 
+
 
