@@ -35,6 +35,7 @@ namespace FilmStudion.Controllers
             _studioRepo = studioRepo;
         }
 
+        [Authorize(Roles = "admin")]
         [HttpPut("create")]
         public IActionResult CreateFilm([FromBody] CreateFilmDto model)
         {
