@@ -67,11 +67,11 @@ Denna behöver du skriva in Id både för filmen och filmcopyId för att slippa 
 
 **Kräver ej admin**
 
-GET: Hämta specifik film
-/api/Film/{id}
+GET: /api/Film/{id}
+Hämta specifik film
 
-GET: Använd för att hämta alla filmer.
-/api/Film/GetAllFilms
+GET: /api/Film/GetAllFilms
+ Använd för att hämta alla filmer.
 
 
 **FilmStudios**
