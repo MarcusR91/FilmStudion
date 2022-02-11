@@ -28,6 +28,7 @@ PUT: Skapar och lägger till ny film
   ]
 }
 ```
+
 PATCH: Ändrar vald property till en film
 /api/Film/{filmId}
 
@@ -40,6 +41,7 @@ PATCH: Ändrar vald property till en film
   }
 ]
 ```
+
 PUT: Ändrar information till specifik film
 /api/Film/{filmId}
 
@@ -64,6 +66,7 @@ Denna behöver du skriva in Id både för filmen och filmcopyId för att slippa 
 ```
 
 **Kräver ej admin**
+
 GET: Hämta specifik film
 /api/Film/{id}
 
