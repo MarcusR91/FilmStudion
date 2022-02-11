@@ -1,16 +1,13 @@
 ﻿using FilmStudion.Models.Film;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace FilmStudion.DTO_s.Film
 {
-    public class FilmDto
+    public class UpdateFilmDto
     {
-        [Required]
-        public int FilmId { get; set; }      
         public string Name { get; set; }
         public DateTime ReleaseDate { get; set; }
         public string Country { get; set; }

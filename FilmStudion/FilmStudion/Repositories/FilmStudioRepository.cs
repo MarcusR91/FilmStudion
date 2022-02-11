@@ -1,6 +1,7 @@
 ﻿using FilmStudion.Data;
 using FilmStudion.Models.FilmStudio;
 using FilmStudion.Repositories.Interface;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -78,7 +79,12 @@ namespace FilmStudion.Repositories
         }
         public IEnumerable<FilmStudio> GetAll() 
         {
-            return _db.FilmStudios;
+            return _db.FilmStudios.Include(c => c.RentedFilmCopies).OrderBy(a => a.Name).ToList();
+        }
+
+        public FilmStudio GetFilmStudioById(int filmStudioId)
+        {
+            return _db.FilmStudios.FirstOrDefault(a => a.StudioId == filmStudioId);
         }
     }
 }

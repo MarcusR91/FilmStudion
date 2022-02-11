@@ -11,7 +11,6 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csprojAssemblyReference.cache
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.AssemblyInfoInputs.cache
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.AssemblyInfo.cs
@@ -22,7 +21,6 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\staticwebassets\FilmStudion.StaticWebAssets.xml
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\scopedcss\bundle\FilmStudion.styles.css
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.RazorTargetAssemblyInfo.cache
-C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csproj.CopyComplete
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\ref\FilmStudion.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.pdb
@@ -49,3 +47,9 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Scrutor.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csprojAssemblyReference.cache
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csproj.CopyComplete

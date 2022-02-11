@@ -6,10 +6,13 @@ using FilmStudion.Models.User;
 using FilmStudion.Repositories.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FilmStudion.Controllers
@@ -19,15 +22,16 @@ namespace FilmStudion.Controllers
     public class FilmStudioController : ControllerBase
     {
 
-        //private readonly IUserRepository _userRepo;
+        private readonly IUserRepository _userRepo;
         private readonly IFilmStudioRepository _studioRepo;
         private readonly AppDbContext _db;
 
 
-        public FilmStudioController(IFilmStudioRepository studioRepo, AppDbContext db)
+        public FilmStudioController(IFilmStudioRepository studioRepo, AppDbContext db, IUserRepository userRepo)
         {
             _studioRepo = studioRepo;
             _db = db;
+            _userRepo = userRepo;
         }
 
         [AllowAnonymous]
@@ -88,7 +92,56 @@ namespace FilmStudion.Controllers
                                    };
 
             return BadRequest(unauthorizedUser);
+        }
 
+        [HttpGet("{studioId}")]
+        public async Task<IActionResult> GetStudio(int studioId)
+        {
+            if (this.User.IsInRole("admin"))
+            {
+                var studio = await _db.FilmStudios.Select(b =>
+                   new GetFilmStudioDto()
+                   {
+                       StudioId = b.StudioId,
+                       Name = b.Name,
+                       Role = b.Role,
+                       City = b.City,
+                       RentedFilmCopies = b.RentedFilmCopies
+                   }).SingleOrDefaultAsync(b => b.StudioId == studioId);
+
+                return Ok(studio);
+            }
+
+
+            var currentStudio = _studioRepo.GetFilmStudioById(studioId);
+            var myStudio = this.User.Identity.Name;
+            
+
+
+            if (myStudio != null && int.Parse(myStudio) == currentStudio.StudioId)
+            {
+                var studio = await _db.FilmStudios.Select(b =>
+                   new GetFilmStudioDto()
+                   {
+                       StudioId = b.StudioId,
+                       Name = b.Name,
+                       Role = b.Role,
+                       City = b.City,
+                       RentedFilmCopies = b.RentedFilmCopies
+                   }).SingleOrDefaultAsync(b => b.StudioId == studioId);
+                return Ok(studio);
+            }
+            else
+            {
+                var studio = await _db.FilmStudios.Select(b =>
+                   new GetFilmStudioLimitedDto()
+                   {
+                       StudioId = b.StudioId,
+                       Name = b.Name,
+                       Role = b.Role
+                   }).SingleOrDefaultAsync(b => b.StudioId == studioId);
+                return Ok(studio);
+            }
         }
     }
 }

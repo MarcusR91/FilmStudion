@@ -23,6 +23,9 @@ namespace FilmStudion.Automapper
             CreateMap<Film, FilmDto>().ReverseMap();
             CreateMap<Film, CreateFilmDto>().ReverseMap();
             CreateMap<FilmStudio, GetFilmStudioDto>().ReverseMap();
+            CreateMap<FilmStudio, GetFilmStudioLimitedDto>().ReverseMap();
+            CreateMap<Film, UpdateFilmDto>().ReverseMap();
+            CreateMap<FilmCopy, FilmCopyDto>().ReverseMap();
         }
     }
 }

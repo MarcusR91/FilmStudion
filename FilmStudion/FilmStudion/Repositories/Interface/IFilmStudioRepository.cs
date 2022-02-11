@@ -12,5 +12,6 @@ namespace FilmStudion.Repositories.Interface
         FilmStudio Authenticate(string userName, string userPassword);
         FilmStudio Register(string userName, string UserPassword, string city);
         public IEnumerable<FilmStudio> GetAll();
+        public FilmStudio GetFilmStudioById(int filmStudioId);
     }
 }

@@ -45,6 +45,15 @@ namespace FilmStudion.Data
                 Token = ""
 
             });
+            modelBuilder.Entity<Film>().HasData(new Film
+            {
+                FilmId = 1,
+                Name = "The Revenant",
+                Country = "sweden",
+                Director = "Marcus",
+                FilmCopies = null
+
+            });
 
 
 

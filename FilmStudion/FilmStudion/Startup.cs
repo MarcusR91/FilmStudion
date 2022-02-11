@@ -43,10 +43,11 @@ namespace FilmStudion
             services.AddScoped<IFilmStudioRepository, FilmStudioRepository>();
             services.AddScoped<IFilmRepository, FilmRepository>();
             services.AddAutoMapper(typeof(MappingProfiles));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FilmStudion", Version = "v1" });
+                c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
