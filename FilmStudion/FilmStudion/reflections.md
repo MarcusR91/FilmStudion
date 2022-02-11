@@ -37,4 +37,20 @@ om den nuvarande användaren har rollen som "admin" så används en ```LINQ SELE
 som ska visas.
 
 För att kunna gämta en specifik film så tar min åtkomstpunkt ```GetFilm()```emot en int som en parameter där Int representerar ett Id på den filmen som eftersöks. Här används en crud funktion som söker upp denfilmen som har det Id som användaren matar in så attfilmen kan hittas. Sedan används i åtkomstpunkten en vanlig if sats som kollar vilken användare somär inloggad. Om en anväändare är autentiserad som antingen admin eller filmstudio så
-visas all information som finns i entiteten Film. Men om användaren är oautentiserad så visas i svaret allting föruom listan av FilmcCopies. Även här används ```This.User``` för att kolla vem som är inloggad.  
+visas all information som finns i entiteten Film. Men om användaren är oautentiserad så visas i svaret allting föruom listan av FilmcCopies. Även här används ```This.User``` för att kolla vem som är inloggad. 
+
+Liknande tillvägagångs sätt som ovan har använts för åtkomsten där en autentiserad admin kan uppdatera en film med nyinformation. Här har jag dock gett min åtkomstpunkt en ```Authorize``` med rollen som admin för att ingen annan ska kunna uppdatera en film. 
+
+**Filmstudio**
+
+Åtkomstpunkten för att hämta filmstudios används samma metoder som åtkomstpunkten för att hämta alla filmer där jag först kollar vilken användare det ärsom är inloggad. En autentiserad användare får mer information om en
+studio än vad en oautentiserad användare får. 
+
+Åtkomstounkten för att hämta en specifik filmstudio händer det inte så mycket nytt. Precis som åtkomstpunkten för att hämta en specifik film skickas här in en int som parameter och som representerar det id på den
+filmstudion som användaren söker efter. Sedan används if satser som kollar vilken användaresom är inloggad. En admin får all den information som finns för en filmstudio. Sedan så har jag en if sats som kollar ifall den
+filmstudion osm är inloggad har samma id som den filmstudio som eftersöks får denne studion fram all information. Om ovanstående inte stämmer så får den studio som skickar anropet begränsad onformation. Detta för att inte
+alla studios ska kunna se allting om alla andra. 
+
+Till dessa åtkomstpunkter används även crud funktioner från mitt repository som hämtar data från databasen. 
+
+
