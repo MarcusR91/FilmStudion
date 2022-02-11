@@ -68,9 +68,11 @@ Denna behöver du skriva in Id både för filmen och filmcopyId för att slippa 
 **Kräver ej admin**
 
 GET: /api/Film/{id}
+
 Hämta specifik film
 
 GET: /api/Film/GetAllFilms
+
  Använd för att hämta alla filmer.
 
 
@@ -88,9 +90,11 @@ Registrera en filmstudio.
 ```
 
 GET:/api/FilmStudio/Getstudios
+
 Hämtar alla studios.
 
 GET: /api/FilmStudio/{studioId}
+
 Hämtar specifik filmstudio
 
 **Users**
@@ -110,6 +114,7 @@ POST: /api/Users/Authenticate
 ```
 
 POST: /api/Users/register
+
 Registrera dig som admin
 
 ```
@@ -120,4 +125,5 @@ Registrera dig som admin
 ```
 
 GET: /api/Users/Getusers
+
 Om du vill hämta d eadmin användare som finns
