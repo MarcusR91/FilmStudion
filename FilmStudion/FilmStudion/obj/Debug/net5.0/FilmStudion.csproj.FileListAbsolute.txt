@@ -51,5 +51,4 @@ C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\Fi
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
-C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csprojAssemblyReference.cache
-C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csproj.CopyComplete
+C:\Users\marcu\OneDrive\Dokument\webbutveckling\repon\FilmStudion\FilmStudion\FilmStudion\obj\Debug\net5.0\FilmStudion.csproj.AssemblyReference.cache

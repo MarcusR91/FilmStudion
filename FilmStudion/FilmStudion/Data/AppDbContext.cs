@@ -54,6 +54,15 @@ namespace FilmStudion.Data
                 FilmCopies = null
 
             });
+             modelBuilder.Entity<Film>().HasData(new Film
+            {
+                FilmId = 2,
+                Name = "The pacifier",
+                Country = "sweden",
+                Director = "Marcus",
+                FilmCopies = null
+
+            });
 
 
 

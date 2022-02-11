@@ -36,7 +36,7 @@ namespace FilmStudion.Controllers
                 var user = _userRepo.Authenticate(model.UserName, model.UserPassword);
                 if (user == null)
                 {
-                    return BadRequest("The username or password is incorrect.");
+                    return BadRequest("");
                 }
 
                 return Ok(new
@@ -53,7 +53,7 @@ namespace FilmStudion.Controllers
                 var studio = _studioRepo.Authenticate(model.StudioName, model.StudioPassword);
                 if (studio == null) 
                 {
-                    return BadRequest("The username or password is incorrect.");
+                    return BadRequest("");
                 }
 
                 return Ok(new

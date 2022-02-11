@@ -101,7 +101,7 @@ namespace FilmStudion.Controllers
             return Ok(notAuhtorized);
         }
 
-        [HttpGet("id:int")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> GetFilm(int id)
         {
             if (this.User.IsInRole("filmstudio") || this.User.IsInRole("admin"))
@@ -154,7 +154,7 @@ namespace FilmStudion.Controllers
 
             if (!_filmRepo.UpdateFilm(updatefilm))
             {
-                ModelState.AddModelError("", $"Something went wrong when updating the record {updatefilm.FilmId}");
+                ModelState.AddModelError("", $"Something went wrong when updating {updatefilm.FilmId}");
                 return StatusCode(500, ModelState);
             }
             return Ok(updatefilm);
